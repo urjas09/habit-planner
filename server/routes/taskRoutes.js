@@ -7,6 +7,10 @@ const {
   updateTask,
   deleteTask,
 } = require('../controllers/taskController');
+const { protect } = require('../middleware/authMiddleware');
+
+// All task routes require authentication
+router.use(protect);
 
 router.route('/')
   .get(getTasks)
