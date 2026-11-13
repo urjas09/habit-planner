@@ -5,6 +5,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Planner from './pages/Planner';
+import Habits from './pages/Habits';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               {/* Protected routes */}
               <Route element={<ProtectedRoute />}>
                 <Route path="/" element={<Planner />} />
-                <Route path="/habits" element={<Planner />} />
+                <Route path="/habits" element={<Habits />} />
                 <Route path="/dashboard" element={<Planner />} />
               </Route>
 
